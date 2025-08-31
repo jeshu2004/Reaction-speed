@@ -1,0 +1,31 @@
+.glass {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.btn-cell:hover .pulse-ring {
+  opacity: 0.7;
+}
+
+button { touch-action: manipulation; }
+
+#lb {
+  max-height: 240px; /* adjust as needed */
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #3b82f6 #1e293b;
+}
+
+#lb::-webkit-scrollbar {
+  width: 6px;
+}
+
+#lb::-webkit-scrollbar-thumb {
+  background-color: #3b82f6;
+  border-radius: 3px;
+}
+
+#lb::-webkit-scrollbar-track {
+  background: #1e293b;
+}
