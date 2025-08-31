@@ -32,10 +32,10 @@ let lastTs = 0;
 let countdownActive = false;
 
 let leaderboardData = [
-  { name: "Sam", score: 23 },
-  { name: "Jia", score: 17 },
-  { name: "Ishan", score: 12 },
-  { name: "Ava", score: 9 }
+  { name: "Jaswanth", score: 23 },
+  { name: "Sai", score: 17 },
+  { name: "Vinuthna", score: 12 },
+  { name: "Krithika", score: 9 }
 ];
 
 let audioCtx = null;
