@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Reaction Speed — Mini Game</title>
+
+  <!-- Tailwind (CDN for assignment/demo) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          boxShadow: { glow: '0 0 20px rgba(59,130,246,0.55)' }
+        }
+      }
+    }
+  </script>
+
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body class="bg-slate-950 text-slate-100 min-h-screen">
+  <div class="max-w-5xl mx-auto p-4 md:p-6">
+    <!-- Header -->
+    <header class="flex items-center justify-between mb-4">
+      <h1 class="text-2xl md:text-3xl font-semibold tracking-tight">⚡ Reaction Speed</h1>
+      <div class="text-xs md:text-sm opacity-70">Vanilla JS • Tailwind • GSAP</div>
+    </header>
+
+    <div class="grid md:grid-cols-3 gap-4 md:gap-6">
+      <!-- Game Card -->
+      <section class="md:col-span-2 glass rounded-2xl p-4 md:p-6 shadow-glow">
+        <!-- Controls -->
+        <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+          <div class="flex items-center gap-3">
+            <span class="text-sm opacity-70">Score</span>
+            <span id="score" class="text-xl font-semibold">0</span>
+            <span class="text-sm opacity-70 ml-4">Best</span>
+            <span id="best" class="text-xl font-semibold">0</span>
+          </div>
+
+          <div class="flex items-center gap-2 flex-wrap w-full sm:w-auto">
+            <button id="startBtn" class="px-4 py-3 md:px-3 md:py-2 rounded-2xl bg-blue-600 hover:bg-blue-500 transition shadow-glow text-sm md:text-base w-full sm:w-auto">
+              Start
+            </button>
+            <button id="pauseBtn" class="px-4 py-3 md:px-3 md:py-2 rounded-2xl bg-slate-800 hover:bg-slate-700 transition hidden text-sm md:text-base w-full sm:w-auto">
+              Pause
+            </button>
+            <button id="resumeBtn" class="px-4 py-3 md:px-3 md:py-2 rounded-2xl bg-slate-800 hover:bg-slate-700 transition hidden text-sm md:text-base w-full sm:w-auto">
+              Resume
+            </button>
+            <button id="restartBtn" class="px-4 py-3 md:px-3 md:py-2 rounded-2xl bg-slate-800 hover:bg-slate-700 transition text-sm md:text-base w-full sm:w-auto">
+              Restart
+            </button>
+          </div>
+        </div>
+
+        <!-- Timer bar -->
+        <div class="h-2 rounded-full bg-slate-800 overflow-hidden mb-4">
+          <div id="timerBar" class="h-full bg-blue-500" style="width: 0%"></div>
+        </div>
+
+        <!-- Grid -->
+        <div id="grid" class="grid grid-cols-5 gap-2 sm:gap-3 md:gap-4 select-none touch-none"></div>
+
+        <!-- Status -->
+        <div id="status" class="mt-4 text-sm opacity-75">
+          Press Start to begin.
+        </div>
+      </section>
+
+      <!-- Leaderboard -->
+      <aside class="glass rounded-2xl p-4 md:p-6">
+        <h2 class="text-lg font-semibold mb-3">Leaderboard (stub)</h2>
+        <div id="lb" class="space-y-2 text-sm"></div>
+        <p class="text-xs opacity-60 mt-3">Loads from <code>leaderboard.json</code>. Replace with API later.</p>
+      </aside>
+    </div>
+
+    <footer class="text-center text-xs opacity-60 mt-6">
+      Built for internship assignment — clean UI, smooth animations, responsive.
+    </footer>
+  </div>
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+  <!-- Game script -->
+  <script src="./game.js"></script>
+</body>
+</html>
