@@ -1,37 +1,60 @@
 # ⚡ Reaction Speed — Mini Game
-A fast-paced, interactive web game built with Vanilla JavaScript, Tailwind CSS, and GSAP. Players must click the glowing target before time runs out, testing their reaction time and accuracy. The game features:  
-1.Dynamic gameplay 
-2.Score tracking 
-3.Pause/Resume & Restart 
-4.Leaderboard stub 
-5.Smooth animations 
-6.Responsive design
+
+A fast-paced reaction game built with **Vanilla JavaScript**, **Tailwind CSS**, and **GSAP animations**.  
+Created as part of an internship assignment to demonstrate clean modular code, smooth animations, responsive design, and leaderboard integration.
 
 ---
 
-## **Live Demo**
-
-[Insert Vercel/Netlify Link Here]
-
----
-
-## **Features**
-
-- 5×5 grid with glowing animated target  
-- Score and best score saved in `localStorage`  
-- Difficulty scales with speed and target size  
-- Pause/Resume and Restart functionality  
-- Sound effects for hit, miss, start, and game over  
-- Leaderboard stub (mock JSON)
+## 🚀 Demo
+🔗 Live Demo: [Reaction Speed Game](https://reaction-speed-nine.vercel.app/)  
+📂 GitHub Repo: [reaction-speed](https://github.com/jeshu2004/Reaction-speed)
 
 ---
 
-## **Controls**
-
-- **Start:** Begin the game  
-- **Tap:** Click the glowing circle to increase score  
-- **Pause / Resume:** Pause or continue the game  
-- **Restart:** Restart game at any time  
+## 🎮 How to Play
+1. Press **Start**.
+2. Wait for the **3-2-1 countdown**.
+3. Tap/click the **glowing circle** before the timer runs out.
+4. Each successful tap increases your **score** and makes the game **faster & harder**.
+5. A wrong tap reduces your remaining time.
+6. Game ends when the timer hits zero.
 
 ---
+
+## 🕹️ Controls
+- **Start** → Begin the game with countdown.  
+- **Pause** → Pause the current game.  
+- **Resume** → Continue after pausing.  
+- **Restart** → Restart a fresh session.  
+
+---
+
+## ✨ Features
+- Responsive **grid layout** (mobile & desktop).
+- **Smooth GSAP animations** (pulse, timer bar, button feedback).
+- **Glassmorphism UI** with Tailwind.
+- Countdown with **beep sounds**.
+- **Dynamic difficulty**: speed & target size shrink with progress.
+- **Local best score** stored in `localStorage`.
+- **Leaderboard stub** (static JSON, ready to replace with API).
+- **Sound feedback** for clicks, countdown, success & game over.
+
+---
+## 📂 Project Structure
+├── index.html # Main game page
+├── styles.css # Extra styles (glass effect, scrollbar, etc.)
+├── game.js # Core game logic
+├── leaderboard.json # (stub data for leaderboard)
+└── README.md # Documentation
+
+## 🛠️ Tech Stack
+- **Vanilla JS** (no frameworks)
+- **Tailwind CSS** (CDN build)
+- **GSAP** (animations)
+- **Web Audio API** (sound effects)
+
+---
+
+## 📜 License
+MIT License — free to use and modify.
 
